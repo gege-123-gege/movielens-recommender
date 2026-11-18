@@ -1,0 +1,99 @@
+{
+  "selection_rule": "maximize validation ndcg@10; exact ties choose fewer neighbors",
+  "dataset_sha256": "506d64ca44484487c11dc2d9a28de5c54948213e6b96285e298afe28d6ea4e0f",
+  "configuration_except_neighbors": {
+    "k": 10,
+    "positive_threshold": 4,
+    "train_fraction_target": 0.8,
+    "validation_fraction_target": 0.1
+  },
+  "selected_neighbors": 100,
+  "selected_run_directory": "outputs/neighbors100",
+  "test_metrics_used": false,
+  "candidates": [
+    {
+      "run_directory": "outputs/neighbors20",
+      "neighbors": 20,
+      "validation": {
+        "users": 1103,
+        "recall@10": 0.06509010562850638,
+        "ndcg@10": 0.2644439118946181,
+        "warm_users": {
+          "users": 492,
+          "recall@10": 0.05750662265008311,
+          "ndcg@10": 0.13518382752536406
+        },
+        "cold_users": {
+          "users": 611,
+          "recall@10": 0.07119660910704034,
+          "ndcg@10": 0.36852895528197166
+        },
+        "users_without_positive_labels": 31,
+        "positive_targets": 57812,
+        "reachable_targets": 57807,
+        "unknown_item_targets": 5,
+        "previously_seen_targets": 0,
+        "reachable_target_fraction": 0.9999135127655158,
+        "catalog_coverage": 0.06663025669033315,
+        "latency_ms_mean": 0.872634360801967,
+        "latency_ms_p95": 1.9187099995178865
+      }
+    },
+    {
+      "run_directory": "outputs/baseline",
+      "neighbors": 50,
+      "validation": {
+        "users": 1103,
+        "recall@10": 0.062481044587084276,
+        "ndcg@10": 0.2656646555763249,
+        "warm_users": {
+          "users": 492,
+          "recall@10": 0.05165744718526891,
+          "ndcg@10": 0.1379205760638247
+        },
+        "cold_users": {
+          "users": 611,
+          "recall@10": 0.07119660910704034,
+          "ndcg@10": 0.36852895528197166
+        },
+        "users_without_positive_labels": 31,
+        "positive_targets": 57812,
+        "reachable_targets": 57807,
+        "unknown_item_targets": 5,
+        "previously_seen_targets": 0,
+        "reachable_target_fraction": 0.9999135127655158,
+        "catalog_coverage": 0.0551611141452758,
+        "latency_ms_mean": 0.7412518585679885,
+        "latency_ms_p95": 1.35883999980706
+      }
+    },
+    {
+      "run_directory": "outputs/neighbors100",
+      "neighbors": 100,
+      "validation": {
+        "users": 1103,
+        "recall@10": 0.06545224983301891,
+        "ndcg@10": 0.2685487215140399,
+        "warm_users": {
+          "users": 492,
+          "recall@10": 0.05831850284841096,
+          "ndcg@10": 0.1443862767331328
+        },
+        "cold_users": {
+          "users": 611,
+          "recall@10": 0.07119660910704034,
+          "ndcg@10": 0.36852895528197166
+        },
+        "users_without_positive_labels": 31,
+        "positive_targets": 57812,
+        "reachable_targets": 57807,
+        "unknown_item_targets": 5,
+        "previously_seen_targets": 0,
+        "reachable_target_fraction": 0.9999135127655158,
+        "catalog_coverage": 0.05243036592026215,
+        "latency_ms_mean": 0.8791559383540468,
+        "latency_ms_p95": 1.6257599996606587
+      }
+    }
+  ]
+}
